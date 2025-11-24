@@ -1,0 +1,522 @@
+/* CourseModules.css - Clean Modern Finance Design */
+
+/* ========================================
+   DESKTOP VIEW (1200px+)
+   ======================================== */
+.course-modules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.module-card {
+  background: #ffffff;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.module-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Module Header with colored line */
+.module-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.75rem;
+}
+
+.module-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3b3531;
+  letter-spacing: -1px;
+  min-width: 50px;
+}
+
+.module-line {
+  flex: 1;
+  height: 6px;
+  border-radius: 0;
+  background: #84c225;
+  position: relative;
+}
+
+/* Module Title */
+.module-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3b3531;
+  margin: 0.75rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+/* Module Chapters */
+.module-chapters {
+  font-size: 0.95rem;
+  color: #7a7470;
+  margin: 0.5rem 0 1rem 0;
+  font-weight: 400;
+  display: block;
+}
+
+.module-chapters::before {
+  content: '';
+  display: none;
+}
+
+/* Module Description */
+.module-description {
+  font-size: 0.95rem;
+  color: #5a5654;
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem 0;
+  position: relative;
+  padding-left: 0;
+  border-left: none;
+}
+
+/* Module Links */
+.module-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 0;
+  border-top: none;
+  margin-top: 1.5rem;
+}
+
+.link {
+  color: #f59e0b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.link::before {
+  content: '';
+  display: none;
+}
+
+.link:hover {
+  background: transparent;
+  color: #155a9e;
+  transform: none;
+  text-decoration: underline;
+}
+
+.link.hindi {
+  background: transparent;
+  color: #f59e0b;
+}
+
+/* Empty state */
+.no-modules {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #7a7470;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
+.no-modules::before {
+  content: '📖';
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* ========================================
+   LARGE DESKTOP VIEW (1400px+)
+   ======================================== */
+@media (min-width: 1400px) {
+  .course-modules-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .module-card {
+    padding: 0;
+  }
+
+  .module-number {
+    font-size: 3rem;
+  }
+
+  .module-title {
+    font-size: 1.65rem;
+  }
+
+  .module-description {
+    font-size: 1rem;
+  }
+}
+
+/* ========================================
+   TABLET VIEW (768px - 1199px)
+   ======================================== */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .course-modules-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .module-card {
+    padding: 0;
+  }
+
+  .module-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .module-header {
+    margin-bottom: 0.875rem;
+    gap: 0.625rem;
+  }
+
+  .module-number {
+    font-size: 2.25rem;
+  }
+
+  .module-line {
+    height: 5px;
+  }
+
+  .module-title {
+    font-size: 1.35rem;
+    margin: 0.625rem 0;
+  }
+
+  .module-chapters {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0.875rem 0;
+  }
+
+  .module-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0.875rem 0 1.25rem 0;
+  }
+
+  .module-links {
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   MOBILE VIEW - Large (576px - 767px)
+   ======================================== */
+@media (max-width: 767px) and (min-width: 576px) {
+  .course-modules-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .module-card {
+    padding: 0;
+  }
+
+  .module-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .module-header {
+    margin-bottom: 0.875rem;
+    gap: 0.625rem;
+  }
+
+  .module-number {
+    font-size: 2rem;
+  }
+
+  .module-line {
+    height: 5px;
+  }
+
+  .module-title {
+    font-size: 1.25rem;
+    margin: 0.625rem 0;
+  }
+
+  .module-chapters {
+    font-size: 0.875rem;
+    margin: 0.5rem 0 0.875rem 0;
+  }
+
+  .module-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0.875rem 0 1.25rem 0;
+  }
+
+  .module-links {
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  .no-modules {
+    padding: 3rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .no-modules::before {
+    font-size: 3.5rem;
+  }
+}
+
+/* ========================================
+   MOBILE VIEW - Small (up to 575px)
+   ======================================== */
+@media (max-width: 575px) {
+  .course-modules-container {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 0;
+  }
+
+  .module-card {
+    padding: 0;
+  }
+
+  .module-card:hover {
+    transform: translateY(-1px);
+  }
+
+  .module-header {
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .module-number {
+    font-size: 1.75rem;
+    min-width: 40px;
+  }
+
+  .module-line {
+    height: 4px;
+  }
+
+  .module-title {
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
+  }
+
+  .module-chapters {
+    font-size: 0.8125rem;
+    margin: 0.5rem 0 0.75rem 0;
+  }
+
+  .module-description {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin: 0.75rem 0 1.125rem 0;
+  }
+
+  .module-links {
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .link {
+    font-size: 0.875rem;
+  }
+
+  .no-modules {
+    padding: 2.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .no-modules::before {
+    font-size: 3rem;
+  }
+}
+
+/* ========================================
+   EXTRA SMALL MOBILE (up to 375px)
+   ======================================== */
+@media (max-width: 375px) {
+  .course-modules-container {
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .module-header {
+    margin-bottom: 0.625rem;
+    gap: 0.5rem;
+  }
+
+  .module-number {
+    font-size: 1.5rem;
+    min-width: 35px;
+  }
+
+  .module-line {
+    height: 4px;
+  }
+
+  .module-title {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .module-chapters {
+    font-size: 0.75rem;
+    margin: 0.4rem 0 0.625rem 0;
+  }
+
+  .module-description {
+    font-size: 0.8125rem;
+    margin: 0.625rem 0 1rem 0;
+  }
+
+  .module-links {
+    gap: 0.875rem;
+    margin-top: 1rem;
+  }
+
+  .link {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION FIXES
+   ======================================== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .course-modules-container {
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .module-header {
+    margin-bottom: 0.625rem;
+  }
+
+  .module-number {
+    font-size: 1.75rem;
+  }
+
+  .module-line {
+    height: 4px;
+  }
+
+  .module-title {
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
+  }
+
+  .module-description {
+    font-size: 0.875rem;
+    margin: 0.625rem 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .module-links {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* ========================================
+   ANIMATION & INTERACTION ENHANCEMENTS
+   ======================================== */
+
+/* Remove stagger animations for cleaner look */
+.module-card:nth-child(n) {
+  animation: none;
+}
+
+/* Focus states for accessibility */
+.link:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.module-card:focus-within {
+  outline: 2px solid #84c225;
+  outline-offset: 4px;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .module-card {
+    background: #ffffff;
+  }
+
+  .module-title {
+    color: #3b3531;
+  }
+
+  .module-chapters,
+  .module-description {
+    color: #6f6a66;
+  }
+
+  .link {
+    color: #f59e0b;
+  }
+
+  .link:hover {
+    color: #d97706;
+  }
+}
+
+/* Print styles */
+@media print {
+  .course-modules-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .module-card {
+    page-break-inside: avoid;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .module-links {
+    display: none;
+  }
+
+  .module-line {
+    height: 4px;
+  }
+}

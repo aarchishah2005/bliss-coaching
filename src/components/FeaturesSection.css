@@ -1,0 +1,202 @@
+/* ==================== CSS VARIABLES ==================== */
+:root {
+  --gradient-bg: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  --gradient-accent: linear-gradient(90deg, #667eea, #764ba2);
+  --gradient-card: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
+  --gradient-card-hover: linear-gradient(135deg, #eef1ff 0%, #e5e9ff 100%);
+  
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(102, 126, 234, 0.15);
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-ease: all 0.3s ease;
+}
+
+/* ==================== CONTAINER ==================== */
+.features-container {
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+.features-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==================== HEADER ==================== */
+.features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.features-main-title,
+.features-sub-title {
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.features-main-title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.features-sub-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.features-tagline {
+  color: var(--color-text-muted);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ==================== GRID ==================== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 0.5rem;
+}
+
+/* ==================== CARD ==================== */
+.feature-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* ==================== ILLUSTRATION ==================== */
+.feature-illustration {
+  width: 100%;
+  height: clamp(140px, 25vw, 200px);
+  background: var(--gradient-card);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-ease);
+}
+
+.feature-card:hover .feature-illustration {
+  background: var(--gradient-card-hover);
+  transform: scale(1.05);
+}
+
+.feature-emoji {
+  font-size: clamp(3rem, 6vw, 5rem);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* ==================== CONTENT ==================== */
+.feature-content {
+  text-align: left;
+}
+
+.feature-title {
+  font-size: clamp(1.15rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+.feature-description {
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+@media (min-width: 600px) {
+  .features-container { padding: 4rem 1.5rem; }
+  .features-grid { gap: 2.5rem; }
+}
+
+@media (min-width: 768px) {
+  .features-container { padding: 5rem 2rem; }
+  .features-header { margin-bottom: 5rem; }
+}
+
+@media (min-width: 1024px) {
+  .features-grid { 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem; 
+  }
+  .feature-card { padding: 1.75rem; }
+}
+
+@media (min-width: 1280px) {
+  .features-container { padding: 6rem 2rem; }
+  .feature-card { padding: 2rem; }
+}
+
+/* ==================== MOBILE LANDSCAPE ==================== */
+@media (max-width: 767px) and (orientation: landscape) {
+  .features-container { padding: 2rem 1rem; }
+  .features-header { margin-bottom: 2rem; }
+}
+
+/* ==================== SMALL MOBILE ==================== */
+@media (max-width: 375px) {
+  .features-container { padding: 2rem 0.75rem; }
+  .feature-card { padding: 1.5rem; }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================== HIGH DPI OPTIMIZATION ==================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .feature-card { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
+}

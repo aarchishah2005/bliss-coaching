@@ -1,0 +1,426 @@
+/* Container */
+.academy-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  padding: 1.5rem 1rem;
+  position: relative;
+}
+
+.academy-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+  padding: 0 1rem;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b3531;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.sub-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #3b3531;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.tagline {
+  color: #3b3531;
+  font-size: 0.875rem;
+}
+
+/* Road Path */
+.road-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.road-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.road-desktop {
+  display: none;
+}
+
+.road-mobile {
+  display: block;
+}
+
+/* Cards Section */
+.cards-section {
+  position: relative;
+  margin-top: 3rem;
+  padding: 0 0.5rem;
+}
+
+/* Milestone Markers */
+.milestone {
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #d1d5db;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 2px solid white;
+  z-index: 5;
+}
+
+.milestone-foundation {
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.milestone-intermediate {
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.milestone-advanced {
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Course Card */
+.course-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+}
+
+/* Card Icon */
+.card-icon {
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #f3f4f6;
+}
+
+.icon-emoji {
+  font-size: 1.5rem;
+}
+
+/* Card Content */
+.card-content {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #3b3531;
+  margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #3b3531;
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  color: #3b3531;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Card Stats */
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  color: #3b3531;
+}
+
+.stat-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.stat-text {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Card Button */
+.card-button {
+  width: 100%;
+  background: #f59e0b;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+}
+
+.card-button:hover {
+  background: #991b1b;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-button:active {
+  transform: scale(0.98);
+}
+
+/* ==================== TABLET (600px - 767px) ==================== */
+@media (min-width: 600px) {
+  .academy-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .main-title {
+    font-size: 1.875rem;
+  }
+  
+  .sub-title {
+    font-size: 1.5rem;
+  }
+
+  .cards-grid {
+    max-width: 700px;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+  }
+}
+
+/* ==================== DESKTOP (768px+) ==================== */
+@media (min-width: 768px) {
+  .academy-container {
+    padding: 2rem 2rem;
+  }
+
+  .header-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .main-title {
+    font-size: 2.25rem;
+  }
+  
+  .sub-title {
+    font-size: 1.875rem;
+  }
+  
+  .road-desktop {
+    display: block;
+  }
+
+  .road-mobile {
+    display: none;
+  }
+
+  .cards-section {
+    margin-top: 5rem;
+    padding: 0 1rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .milestone-foundation {
+    top: 30%;
+    left: 8%;
+    transform: none;
+  }
+
+  .milestone-intermediate {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .milestone-advanced {
+    top: 70%;
+    right: 8%;
+    left: auto;
+    transform: none;
+  }
+
+  .milestone {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .card-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .icon-emoji {
+    font-size: 1.75rem;
+  }
+}
+
+/* ==================== LARGE DESKTOP (1024px+) ==================== */
+@media (min-width: 1024px) {
+  .achievement-badge {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -2.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .cards-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* ==================== EXTRA LARGE SCREENS (1280px+) ==================== */
+@media (min-width: 1280px) {
+  .academy-container {
+    padding: 3rem 2rem;
+  }
+
+  .cards-section {
+    padding: 0 2rem;
+  }
+}
+
+/* ==================== MOBILE LANDSCAPE ==================== */
+@media (max-width: 767px) and (orientation: landscape) {
+  .academy-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .header-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 1.25rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .cards-section {
+    margin-top: 2rem;
+  }
+
+  .cards-grid {
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    padding: 1.25rem;
+  }
+}
+
+/* ==================== SMALL MOBILE (max-width: 375px) ==================== */
+@media (max-width: 375px) {
+  .academy-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .main-title {
+    font-size: 1.25rem;
+  }
+
+  .sub-title {
+    font-size: 1.125rem;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+  }
+
+  .card-description {
+    font-size: 0.8125rem;
+  }
+
+  .course-card {
+    padding: 1.25rem;
+  }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .start-dot {
+    animation: none;
+  }
+}
+
+/* ==================== HIGH DPI SCREENS ==================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .course-card {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  }
+}
