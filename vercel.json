@@ -1,0 +1,5 @@
+o	{
+o	  "rewrites": [
+o	    { "source": "/(.*)", "destination": "/" }
+o	  ]
+o	}
